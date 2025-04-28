@@ -36,9 +36,13 @@
   ]);
 
   // Options
-  var options = {
+  var options = {  
+    start: '2006-01-01',
+    end: '2096-12-31',
+    min: '2006-01-01', // don't allow scrolling before 2006
+    max: '2096-12-31', // don't allow scrolling after 2096
     zoomMin: 1000 * 60 * 60 * 24, // 1 day
-    zoomMax: 1000 * 60 * 60 * 24 * 365 * 100, // 100 years
+    zoomMax: 1000 * 60 * 60 * 24 * 365 * 100, // 90 years
     moveable: true,
     zoomable: true,
     showCurrentTime: true, // Today line
@@ -79,3 +83,6 @@
   .purpleEvent {
     background-color: #dab6fc;
     border-color
+git add .
+git commit -m "Updated timeline events"
+git push
